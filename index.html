@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Mercedes F1</title>
+
+        <style>
+            /* określanie stylu dla nagłóka*/
+       header {
+            background-color: grey;
+            padding: 10px;
+            text-align: center;
+            border: 3px black solid;
+            font-weight: bold;
+       }
+            /* określanie stylu dla 1 akapitu*/
+       p {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #0049B7;
+        padding: 2px;
+        width: 50%;
+        border: 3px black solid;
+       }
+            /* określanie stylu dla 2 akapitu*/
+        p#drugi{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #00a4aa;
+        padding: 2px;
+        width: 50%;
+        border: 3px black solid;
+        text-align: left;
+        }
+            /*zmiana koloru przycisków*/
+       button{
+        background-color: #fdff6e ;
+       }
+       
+        </style>
+        <script>
+            // tworzenie funkci która bedzie otwierać nowe okno z oficlaną stroną zespołu //
+            function noweokno() {
+            window.open("https://www.mercedesamgf1.com/", "_blank", "width=600,height=400");
+        }
+            // tworzenie funkcji zapytania//
+        function pytanie() {
+            const zespol = prompt("Jaki jest twój ulubiony zespół?");//użycie funkcji prompt o poproszenie o uzupełnienia pola
+            if (zespol) {
+                alert("Twój ulubiony zespół to " + zespol);//jeżeli pole zostanie uzupełnione to wyświetlana będzie taka informacja//
+            } else {
+                alert("Nie podałeś zespołu.");//jeżeli nie to wyświetli się taki alert
+            }
+            //tworzenie funkcji alert//
+        }
+        function uwaga() {
+            alert("To jest komunikat alert!");
+        }
+            //tworzenie funkcji z potwierdzeniem//
+        function akcja() {
+            const odpowiedz = confirm("Czy chcesz kontynuować?");//użycie funkcji confirm o zapytanie o kontynucacji akcji//
+            if (odpowiedz) {
+                alert("Kontynuujesz akcję.");//jeżeli potweirdzono akcje//
+            } else {
+                alert("Akcja została anulowana.");//jeżeli nie potwerdzono akcji//
+            }
+        }
+        </script>
+    </head> 
+    <!-- zawartość reszty strony-->
+    <body bgcolor="#494D5F">
+        <header><h1>Mercedes AMG Petronas Formula 1 Team</h1></header>
+        
+        <p>Mercedes – niemiecki zespół, konstruktor i dostawca silników Formuły 1, aktywny w latach 1954–1955 i od 2010 roku, po przejęciu Brawn GP. Mistrzami świata kierowców w barwach Mercedesa byli Juan Manuel Fangio, Nico Rosberg i Lewis Hamilton.</p>
+        <img src="merc.jpg" alt="Mercedes AMG F1 Car" width="600px" height="350px"><br>
+        <p id="drugi">W listopadzie 2009 roku Mercedes ogłosił powrót do Formuły 1 po wykupieniu wspólnie z Aabar Investments 75,1% udziałów w Brawn GP. Tytularnym sponsorem zespołu został Petronas, a jego szefem pozostał Ross Brawn. Kierowcami zostali Nico Rosberg z Williamsa oraz powracający do Formuły 1 po przerwie Michael Schumacher.</p>
+        
+        <button onclick="noweokno()">oficjalna strona </button>
+        <button onclick="pytanie()">ulubiony zespół</button>
+        <button onclick="uwaga()">alert</button>
+        <button onclick="akcja()">potwierdzenie</button><br><br><br>
+        <b>Tuszkiewicz 3K</b>
+    </body>
+</html>
+<!--- JAN TUSZKIEWICZ 3K 29.10.2024 -->
